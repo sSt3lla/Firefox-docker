@@ -1,0 +1,10 @@
+# Build only the JS shell
+ac_add_options --enable-application=browser
+
+ac_add_options --enable-debug
+
+ac_add_options --disable-optimize
+
+# Use a dedicated objdir for SpiderMonkey debug builds to avoid
+# conflicting with Firefox build with default configuration.
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-ff-debug

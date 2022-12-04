@@ -1,0 +1,7 @@
+# add common options here, such as making an optimized release build
+mk_add_options MOZ_PARALLEL_BUILD=4
+ac_add_options --enable-optimize --disable-debug
+
+# Build Firefox
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-ff
+ac_add_options --enable-project=browser
